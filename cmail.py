@@ -2,9 +2,9 @@ import smtplib
 from email.message import EmailMessage
 def sendmail(to,subject,body):
     server=smtplib.SMTP_SSL('smtp.gmail.com',465)
-    server.login('chithajallu.vijayalakshmi@gmail.com','ssqc kuuy ouba zlvr')
+    server.login('your email','your passcode')
     msg=EmailMessage()
-    msg['From']='chithajallu.vijayalakshmi@gmail.com'
+    msg['From']='your email'
     msg['To']=to
     msg['Subject']=subject
     msg.set_content(body)
