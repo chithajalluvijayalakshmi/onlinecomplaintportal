@@ -1,0 +1,77 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unsolved</title>
+</head>
+<body>
+    <table cellpadding="10px">
+        {% for i in details %}
+        <tr>
+            <td><a href="{{url_for('view',id1=i[0])}}">view</a></td>
+            <td>{{i[1]}}</td>
+            <td>{{i[2]}}</td>
+            <td>{{i[3]}}</td>
+            <td>{{i[4]}}</td>
+            <td><a href="{{url_for('update',id1=i[0])}}">update</a></td>
+        </tr>
+        {% endfor %}
+</table>
+    
+
+    
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unsolved</title>
+    <style>
+        body{
+           background-image: url('https://wallpapercave.com/uwp/uwp2811744.gif');
+            background-size: cover;
+            
+        }
+        .color{
+            background-color: white;
+            margin-left: 95%;
+        }
+    </style>
+</head>
+<body>
+    <div class="color">
+    <a href="{{url_for('admindashboard')}}">Back</a>
+    </div>
+    <table border="1px" style="width: 97%; text-align: center; font-size: 20px; background-color: white; " >
+       
+        {% for i in details %}
+        <tr>
+            <td></td>
+            <td>Email</td>
+            <td>Problem</td>
+            <td>Address</td>
+            <td>Date & Time</td>
+            <td></td>
+
+        </tr>
+        
+        <tr>
+            <td><a href="{{url_for('view',id1=i['id'])}}">view</a></td>
+            <td>{{i['email']}}</td>
+            <td>{{i['problem']}}</td>
+            <td>{{i['address']}}</td>
+            <td>{{i['date']}}</td>
+            <td><a href="{{url_for('update',id1=i['id'])}}">update</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+
+    
+</body>
+</html>

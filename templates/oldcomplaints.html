@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<table cellpadding="10px">
+        <style>
+            body{
+               background-image: url('https://media.istockphoto.com/id/1249041775/photo/photo-depicting-the-person-who-focuses-on-the-target.jpg?s=612x612&w=0&k=20&c=8gu2chWSKen1mRvABWhS4NvI9437yaymHXPOmzM8QyA=');
+                background-size: cover;
+                
+            }
+            .color{
+                background-color: white;
+                margin-left: 95%;
+            }
+        </style>
+        </head>
+        <body>
+            <div class="color">
+                <a href="{{url_for('admindashboard')}}">Back</a>
+                </div>
+                <table border="1px" style="width: 97%; text-align: center; font-size: 20px; background-color: white; " >
+                   
+        {% for i in details %}
+        <tr>
+            <td><a href="{{url_for('view',id1=i['id'])}}">view</a></td>
+            <td>{{i['email']}}</td>
+            <td>{{i['problem']}}</td>
+            <td>{{i['address']}}</td>
+            <td>{{i['date']}}</td>
+            <td><a href="{{url_for('update',id1=i['id'])}}">update</a></td>
+        </tr>
+        {% endfor %}
+</table>
+   
+</body>
+</html>
